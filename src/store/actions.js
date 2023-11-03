@@ -40,3 +40,16 @@ export const fetchUsers = () => {
     }
   }
 }
+
+export const login = (userData) => {
+  return async (dispatch) => {
+    try {
+      const response = await axios.post("https://jsonplaceholder.typicode.com/users", userData);
+      console.log(response);
+
+      dispatch({type:'LOGIN_SUCCESS', payload: response.data})
+    } catch (error) {
+      dispatch({type: 'LOGIN_FAILURE', payload: error.message})
+    }
+  }
+}

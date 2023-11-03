@@ -7,6 +7,7 @@ import { createRoot } from "react-dom/client";
 import Counter from "./components/counter"
 import Signup from "./components/signup";
 import UserList from "./components/UserList";
+import Login from "./components/login";
 
 
 const rootElement = document.getElementById("root");
@@ -19,6 +20,7 @@ root.render(
     <Counter />
     <Signup />
     <UserList />
+    <Login />
     </>
   </Provider>
 );
